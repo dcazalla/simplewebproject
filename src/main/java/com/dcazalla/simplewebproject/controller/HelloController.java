@@ -1,4 +1,4 @@
-package com.dcazalla.simplewebproject;
+package com.dcazalla.simplewebproject.controller;
 
 
 import org.springframework.stereotype.Controller;

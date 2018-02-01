@@ -11,6 +11,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <oracle.driver.version>12.1.0.1</oracle.driver.version>
+        <hibernate.version>5.2.9.Final</hibernate.version>
+        
     </properties>
 
     <parent>
@@ -22,6 +25,11 @@
 
     <dependencies>
         <!-- Spring Boot -->
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -57,8 +65,19 @@
             <artifactId>jstl</artifactId>
         </dependency>
         
-        <!-- New dependencies -->
+        <!-- ORACLE database driver -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>${oracle.driver.version}</version>
+        </dependency>
 
+        <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
 
     </dependencies>
 
