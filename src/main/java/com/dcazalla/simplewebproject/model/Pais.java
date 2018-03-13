@@ -9,6 +9,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import com.dcazalla.simplewebproject.model.base.EntidadBase;
+
 @Entity
 @Table(name = "PAIS", uniqueConstraints=@UniqueConstraint(columnNames={"DESC_PAIS"}, name="UK_PAIS"))
 @SequenceGenerator(
@@ -16,7 +18,7 @@ import javax.persistence.UniqueConstraint;
         sequenceName = "PAIS_SEQ",
         allocationSize = 1
 )
-public class Pais {
+public class Pais extends EntidadBase{
 	
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PaisSeq")
